@@ -17,7 +17,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   async function getSearched() {
-    const data = await fetch(BASE_URL + `?limit=40`);
+    // const data = await fetch(BASE_URL + `?limit=40`);
+    const data = await fetch(`https://dknhmgstb7daepfpievifqg7te0vaknw.lambda-url.eu-central-1.on.aws?limit=40`);
     const items = await data.json();
     setSearchedItems(items);
   }
